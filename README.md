@@ -2,7 +2,7 @@
 
 **Effective Date:** September 30, 2026  
 **Application Identifier:** com.nhyle.hyperionmaritime  
-**Developer Contact:** hyperionmaritimedev@gmail.com  
+**Developer Contact:** zagfunne@gmail.com  
 
 Hyperion Maritime ("we", "our", or "us") provides Hyperion Maritime CRP as an offline-first reference and exam review terminal for maritime deck officers and radio operators preparing for OIC-NW and GMDSS licensure examinations.
 
@@ -40,4 +40,4 @@ We may update this policy periodically to align with application features or reg
 
 ### 6. Contact Information
 For questions regarding this policy or data handling disclosures, contact:  
-**Email:** hyperionmaritimedev@gmail.com
+**Email:** zagfunne@gmail.com
