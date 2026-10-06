@@ -2,7 +2,7 @@
 
 **Effective Date:** October 7, 2026  
 **Application Identifier:** `com.nhyle.hyperionmaritime`  
-**Developer Contact:** `zagfunne@gmail.com`  
+**Developer Contact:** `hyperionmaritimex@gmail.com`  
 
 **Hyperion Maritime** (*"we"*, *"our"*, or *"us"*) provides **Hyperion Maritime CRP** as an offline-first reference and examination review terminal engineered for maritime deck officers and radio communication operators preparing for professional licensure assessments. 
 
@@ -85,4 +85,4 @@ For legal inquiries, data protection clarifications, or technical compliance not
 
 * **Entity:** Hyperion Maritime  
 * **Lead Developer:** Technical Architecture Division  
-* **Direct Electronic Mail:** `zagfunne@gmail.com`
+* **Direct Electronic Mail:** `hyperionmaritimex@gmail.com`
