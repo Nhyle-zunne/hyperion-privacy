@@ -1,10 +1,10 @@
-# Privacy Policy for Hyperion Maritime CRP
+# Privacy Policy for Hyperion: OIC NW & GMDSS
 
 **Effective Date:** October 7, 2026  
 **Application Identifier:** `com.nhyle.hyperionmaritime`  
 **Developer Contact:** `hyperionmaritimex@gmail.com`  
 
-**Hyperion Maritime** (*"we"*, *"our"*, or *"us"*) provides **Hyperion Maritime CRP** as an offline-first reference and examination review terminal engineered for maritime deck officers and radio communication operators preparing for professional licensure assessments. 
+**Hyperion Maritime** (*"we"*, *"our"*, or *"us"*) provides **Hyperion: OIC NW & GMDSS** as an offline-first reference and examination review terminal engineered for maritime deck officers and radio communication operators preparing for professional licensure assessments. 
 
 This *Privacy Policy* establishes how our application processes, safeguards, and retains data, specifically detailing our architecture regarding local assessment records, offline cryptographic clearance tokens, and digital in-app subscription processing via **Google Play Billing**.
 
@@ -81,7 +81,7 @@ We reserve the right to amend this Privacy Policy to ensure continuous alignment
 
 ### 8. Official Contact Channel
 
-For legal inquiries, data protection clarifications, or technical compliance notices regarding Hyperion Maritime CRP:
+For legal inquiries, data protection clarifications, or technical compliance notices regarding Hyperion: OIC NW & GMDSS:
 
 * **Entity:** Hyperion Maritime  
 * **Lead Developer:** Technical Architecture Division  
