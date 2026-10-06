@@ -69,7 +69,7 @@ We apply strict defense-in-depth principles:
 
 ### 6. Children’s Privacy Protection
 
-Hyperion Maritime CRP is a technical diagnostic tool engineered exclusively for maritime deck officers, navigational cadets, and radio operators undergoing licensure training aged **18 and older**. We do not knowingly solicit, collect, or process information from minors or individuals under the age of 13.
+Hyperion: OIC NW & GMDSS is a technical diagnostic tool engineered exclusively for maritime deck officers, navigational cadets, and radio operators undergoing licensure training aged **18 and older**. We do not knowingly solicit, collect, or process information from minors or individuals under the age of 13.
 
 ---
 
