@@ -1,75 +1,79 @@
-# Privacy Policy for Hyperion: OIC NW & GMDSS
+# Privacy Policy for Hyperion Maritime Reviewer
 
-**Effective Date:** October 7, 2026  
+**Effective Date:** October 17, 2026  
 **Application Identifier:** `com.nhyle.hyperionmaritime`  
 **Developer Contact:** `hyperionmaritimex@gmail.com`  
 
-**Hyperion Maritime** (*"we"*, *"our"*, or *"us"*) provides **Hyperion: OIC NW & GMDSS** as an offline-first reference and examination review terminal engineered for maritime deck officers and radio communication operators preparing for professional licensure assessments. 
+**Hyperion Maritime** (*"we"*, *"our"*, or *"us"*) provides **Hyperion Maritime Reviewer** as an offline-first examination preparation terminal engineered for maritime deck officers, marine engineers, and radio operators preparing for professional licensure assessments under STCW standards (encompassing Deck OIC-NW, Engine OIC-EW, GMDSS GOC, Deck Management Level, and Engine Management Level).
 
-This *Privacy Policy* establishes how our application processes, safeguards, and retains data, specifically detailing our architecture regarding local assessment records, offline cryptographic clearance tokens, and digital in-app subscription processing via **Google Play Billing**.
+This *Privacy Policy* establishes how our application processes, safeguards, and retains data, specifically detailing our architecture regarding local assessment records, offline cryptographic clearance tokens, promotional pass validation via Google Firebase, and digital in-app subscription processing via **Google Play Billing**.
 
 ---
 
 ### 1. Information Collection & Data Processing
 
 #### A. In-App Purchases & Subscription Entitlements (*Google Play Billing*)
-When you purchase, upgrade, or renew an auto-renewing subscription pass (*Deck OIC-NW Pass*, *GMDSS GOC Pass*, or *Hyperion All-Access Pass*) via the Google Play Store, our application interfaces directly with the official **Google Play Billing Library** to grant and synchronize access rights.
-* **Non-Sensitive Transaction Metadata Processed:**
+When you purchase, upgrade, or renew an auto-renewing subscription pass (*Deck OIC-NW Pass*, *GMDSS GOC Pass*, *Engine OIC-EW Pass*, *Deck Management Pass*, or *Engine Management Pass*) via the Google Play Store, our application interfaces directly with the official **Google Play Billing Library** to grant and synchronize access rights.
+- **Non-Sensitive Transaction Metadata Processed:**
   * **Google Play Order Identifiers** (*e.g., `GPA.xxxx-xxxx-xxxx-xxxxx`*)
-  * **Digital Product Identifiers & Base Plan Identifiers** (*SKUs*)
+  * **Digital Product Identifiers & Base Plan Identifiers** (*SKUs matching individual track passes*)
   * **Cryptographic Purchase Tokens & Entitlement Verification States** (*`PURCHASED`*, *`PENDING`*)
   * **Purchase Timestamps & Auto-Renewal Flags** (*`autoRenewing = true/false`*)
-* **Explicit Purpose of Collection:** This metadata is processed strictly for **Core App Functionality**, **Cross-Session Purchase Restoration**, **Entitlement Validation**, and **Offline Maritime Continuity** (*enabling verified pass persistence at sea when operating outside cellular/satellite connectivity*).
-* **Absolute Exclusion of Financial Instruments:** **We never collect, transmit, view, or store your payment instruments.** All financial transactions—including credit cards, debit cards, bank processing, GCash, Maya, and direct carrier billing—are executed exclusively and securely through Google Play’s PCI-DSS compliant infrastructure.
+- **Explicit Purpose of Collection:** This metadata is processed strictly for **Core App Functionality**, **Cross-Session Purchase Restoration**, **Entitlement Validation**, and **Offline Maritime Continuity** (*enabling verified pass persistence at sea when operating outside cellular/satellite connectivity*).
+- **Absolute Exclusion of Financial Instruments:** **We never collect, transmit, view, or store your payment instruments.** All financial transactions—including credit cards, debit cards, bank processing, e-wallets, and direct carrier billing—are executed exclusively and securely through Google Play’s PCI-DSS compliant infrastructure.
 
 #### B. Local Assessment Progress & Diagnostic Logs
-* **Device-Sandboxed Storage:** All practice mock exams, competency drill records, question bookmarks, diagnostic telemetry, and performance percentages are retained strictly inside your local device storage using encrypted-at-rest internal SQLite/Room database structures.
-* **Zero Account Registration:** You are never required to register an account, input an email address, link social profiles, or disclose personal identity credentials to utilize the examination reviewer.
+- **Device-Sandboxed Storage:** All practice mock exams, competency drill records, mistakes notebook logs, question bookmarks, study time telemetry, and performance percentages are retained strictly inside your local device storage using encrypted-at-rest internal SQLite/Room database structures.
+- **Zero Account Registration:** You are never required to register an account, input an email address, link social profiles, or disclose personal identity credentials to utilize the examination reviewer.
 
-#### C. Terminal Clearance & Hardware License Activation
-* For candidates utilizing institutional offline terminal licenses, cryptographically salted hardware identifiers generated by the host operating system are verified locally on-device. This cryptographic handshake is isolated to your physical terminal and is never stored on external commercial servers.
+#### C. Terminal Clearance, Promo Validation & Cryptographic Activation
+- **Offline Key Activation:** For candidates utilizing institutional offline terminal licenses, cryptographically salted hardware identifiers generated by the host operating system are verified locally on-device without external transmission.
+- **Online Promo Pass & License Verification:** When activating online promotional codes or validating remote clearance status, the application communicates securely over HTTPS (Port 443) with our Google Firebase infrastructure (Firebase Remote Config and Google Cloud Firestore).
+  * **Data Transmitted for Verification:** Pseudonymous device request code / terminal ID, promotional code entered, device manufacturer and model, Android OS version, and application package name.
+  * **Explicit Purpose:** Enforcing one-device-per-pass anti-piracy controls, verifying voucher validity intervals, and maintaining terminal clearance status. This data contains no personally identifying information (PII) and is never linked to personal contact profiles.
 
 ---
 
 ### 2. Third-Party Network Services & SDK Architecture
 
-* **Google Play Services (*Google LLC*):** The application integrates the official **Google Play Billing Library** exclusively for processing commercial licensing and subscription restoration. Your interactions with Google Play services are subject to the [Google Privacy Policy](https://policies.google.com/privacy).
-* **Zero Telemetry or Behavioral Tracking:** Hyperion Maritime CRP contains **zero** commercial advertising SDKs, marketing trackers, behavioral fingerprinting scripts, or third-party analytics monitors (*e.g., Firebase Analytics, Adjust, AppsFlyer*).
-* **Optional Institutional Candidate Desk:** An external link to an institutional candidate support desk is provided via Meta Messenger. Initiating contact through this channel is completely voluntary and governed independently by Meta’s Data Policy.
+- **Google Play Services (*Google LLC*):** The application integrates the official **Google Play Billing Library** exclusively for processing commercial licensing and subscription restoration. Your interactions with Google Play services are subject to the [Google Privacy Policy](https://policies.google.com/privacy).
+- **Google Firebase (*Google LLC*):** The application uses **Firebase Remote Config** and **Google Cloud Firestore REST API** solely for validating promotional vouchers, syncing feature flags, and verifying terminal clearance states.
+- **Zero Commercial Advertising or Behavioral Trackers:** Hyperion Maritime contains **zero** third-party advertising SDKs, commercial marketing trackers, behavioral fingerprinting scripts, or third-party analytics monitors (*e.g., Adjust, AppsFlyer*).
+- **Optional Candidate Support Desk:** An external link to candidate support is provided via Meta Messenger. Initiating contact through this channel is completely voluntary and governed independently by Meta’s Data Policy.
 
 ---
 
 ### 3. Subscription Management & Cancellation Framework
 
-* **Billing Cycle & Automated Renewal:** Subscriptions auto-renew on a recurring interval (*Weekly*, *Monthly*, or *Yearly*) corresponding to your selected tier unless formally canceled through Google Play at least **24 hours** prior to the expiration of the current cycle.
-* **Direct In-App Management:** In strict compliance with Google Play Developer Policies, candidates can manage, adjust, or cancel active subscriptions immediately by tapping the in-app **"MANAGE / CANCEL SUBSCRIPTION"** terminal button, or manually via:
+- **Billing Cycle & Automated Renewal:** Subscriptions auto-renew on a recurring interval (*Weekly*, *Monthly*, or *Yearly*) corresponding to your selected tier unless formally canceled through Google Play at least **24 hours** prior to the expiration of the current cycle.
+- **Direct In-App Management:** In strict compliance with Google Play Developer Policies, candidates can manage, adjust, or cancel active subscriptions immediately by tapping the in-app **"MANAGE / CANCEL SUBSCRIPTION"** terminal button, or manually via:
   > **Google Play Store** $\rightarrow$ **Profile Avatar** $\rightarrow$ **Payments & subscriptions** $\rightarrow$ **Subscriptions**
-* **Offline Access Retention:** Active subscriptions verified by Google Play remain authorized offline for prolonged voyages. If a subscription is canceled or revoked, access remains available until the conclusion of the active prepaid cycle, after which premium modules revert to locked preview mode.
+- **Offline Access Retention:** Active subscriptions verified by Google Play remain authorized offline for prolonged voyages. If a subscription is canceled or revoked, access remains available until the conclusion of the active prepaid cycle, after which premium modules revert to locked preview mode.
 
 ---
 
 ### 4. Data Retention, Portability & Deletion
 
-* **User Autonomy Over Records:** Because all mock exam logs, bookmarks, and diagnostic records exist exclusively in sandboxed application storage, you maintain total sovereignty over your data footprint.
-* **Permanent Data Purging:** You can permanently purge all stored assessment records, caches, and localized entitlement tokens at any moment by navigating to:
-  > **Android Settings** $\rightarrow$ **Apps** $\rightarrow$ **Hyperion Maritime CRP** $\rightarrow$ **Storage** $\rightarrow$ **Clear Storage / Clear Data**  
+- **User Autonomy Over Records:** Because all mock exam logs, bookmarks, and diagnostic records exist exclusively in sandboxed application storage, you maintain total sovereignty over your data footprint.
+- **Permanent Data Purging:** You can permanently purge all stored assessment records, caches, and localized entitlement tokens at any moment by navigating to:
+  > **Android Settings** $\rightarrow$ **Apps** $\rightarrow$ **Hyperion Maritime** $\rightarrow$ **Storage** $\rightarrow$ **Clear Storage / Clear Data**  
   *Alternatively, uninstalling the application permanently destroys all locally hosted databases.*
-* **Commercial Purchase Records:** Official transactional records linked to your Google Account are archived and retained independently by **Google LLC** in accordance with statutory consumer taxation and Google Play account policies.
+- **Commercial Purchase Records:** Official transactional records linked to your Google Account are archived and retained independently by **Google LLC** in accordance with statutory consumer taxation and Google Play account policies.
 
 ---
 
 ### 5. Security Architecture
 
 We apply strict defense-in-depth principles:
-* Enforcement of Android’s internal app sandboxing architecture to prevent cross-app process inspection.
-* Zero plaintext transmission of clearance tokens or verification requests.
-* Strict runtime separation between ephemeral Google Play subscriptions and authoritative, permanent hardware licenses.
+- Enforcement of Android’s internal app sandboxing architecture to prevent cross-app process inspection.
+- End-to-end encrypted HTTPS transmission for all cryptographic remote license sync operations.
+- Strict runtime separation between ephemeral Google Play subscriptions and authoritative, permanent hardware licenses.
 
 ---
 
-### 6. Children’s Privacy Protection
+### 6. Target Audience
 
-Hyperion: OIC NW & GMDSS is a technical diagnostic tool engineered exclusively for maritime deck officers, navigational cadets, and radio operators undergoing licensure training aged **18 and older**. We do not knowingly solicit, collect, or process information from minors or individuals under the age of 13.
+Hyperion Maritime Exam Reviewer is an advanced technical diagnostic tool engineered exclusively for maritime deck officers, marine engineers, navigational cadets, and radio operators undergoing licensure training aged **18 and older**. We do not knowingly solicit, collect, or process information from minors or individuals under the age of 13.
 
 ---
 
@@ -81,8 +85,8 @@ We reserve the right to amend this Privacy Policy to ensure continuous alignment
 
 ### 8. Official Contact Channel
 
-For legal inquiries, data protection clarifications, or technical compliance notices regarding Hyperion: OIC NW & GMDSS:
+For legal inquiries, data protection clarifications, or technical compliance notices regarding Hyperion Maritime Exam Reviewer:
 
-* **Entity:** Hyperion Maritime  
-* **Lead Developer:** Technical Architecture Division  
-* **Direct Electronic Mail:** `hyperionmaritimex@gmail.com`
+- **Entity:** Hyperion Maritime  
+- **Lead Developer:** Nhyle Gelo Devero 
+- **Direct Electronic Mail:** `hyperionmaritimex@gmail.com`
